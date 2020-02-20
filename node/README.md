@@ -3,14 +3,16 @@
 To run this application locally, first install it and then run either of the flows described below. Additionally, please also refer to the [Quickstart guide](https://plaid.com/docs/quickstart).
 
 ## Installing the quickstart app
-``` bash
+
+```bash
 git clone https://github.com/plaid/quickstart.git
 cd quickstart/node
 npm install
 ```
 
 ## The canonical flow
-``` bash
+
+```bash
 # Start the Quickstart with your API keys from the Dashboard
 # https://dashboard.plaid.com/account/keys
 #
@@ -18,9 +20,9 @@ npm install
 # initializing Link. Note that this list must contain 'assets' in
 # order for the app to be able to create and retrieve asset reports.
 
-PLAID_CLIENT_ID='CLIENT_ID' \
-PLAID_SECRET='SECRET' \
-PLAID_PUBLIC_KEY='PUBLIC_KEY' \
+PLAID_CLIENT_ID='5de94e7ce33413001250b1df' \
+PLAID_SECRET='ec8fd03a299a989b5f395d13fdd7fd' \
+PLAID_PUBLIC_KEY='b42c956ef93a1df5d7c7dddfb06290' \
 PLAID_ENV='sandbox' \
 PLAID_PRODUCTS='transactions' \
 PLAID_COUNTRY_CODES='US,CA,GB,FR,ES' \
@@ -30,9 +32,10 @@ node index.js
 ```
 
 ## The OAuth redirect flow
+
 Some European institutions require an OAuth redirect authentication flow, where the end user is redirected to the bank’s website or mobile app to authenticate. For this flow, you should provide two additional configuration parameters, `PLAID_OAUTH_NONCE` and `PLAID_OAUTH_REDIRECT_URI`.
 
-``` bash
+```bash
 # You will need to whitelist the PLAID_OAUTH_REDIRECT_URI for
 # your client ID through the Plaid developer dashboard at
 # https://dashboard.plaid.com/team/api.
@@ -46,9 +49,9 @@ Some European institutions require an OAuth redirect authentication flow, where 
 # PLAID_PRODUCTS is a comma-separated list of products to use when
 # initializing Link.
 
-PLAID_CLIENT_ID='CLIENT_ID' \
-PLAID_SECRET='SECRET' \
-PLAID_PUBLIC_KEY='PUBLIC_KEY' \
+PLAID_CLIENT_ID='5de94e7ce33413001250b1df' \
+PLAID_SECRET='ec8fd03a299a989b5f395d13fdd7fd' \
+PLAID_PUBLIC_KEY='b42c956ef93a1df5d7c7dddfb06290' \
 PLAID_ENV='sandbox' \
 PLAID_PRODUCTS='transactions' \
 PLAID_COUNTRY_CODES='GB' \
